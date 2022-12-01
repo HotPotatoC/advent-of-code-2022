@@ -2,7 +2,7 @@
 
 auto parse_input() {
   std::ifstream input;
-  std::priority_queue<int> pq_calories;
+  std::priority_queue<int> parts;
 
   input.open("input.in");
 
@@ -10,26 +10,26 @@ auto parse_input() {
   auto current = 0;
   while (std::getline(input, line)) {
     if (line.empty()) {
-      pq_calories.push(current);
+      parts.push(current);
       current = 0;
     } else {
       current += std::stoi(line);
     }
   }
 
-  return pq_calories;
+  return parts;
 }
 
 auto part_one() { return parse_input().top(); }
 
 auto part_two() {
-  auto pq_calories = parse_input();
+  auto parts = parse_input();
 
   auto ans = 0;
   auto i = 0;
-  while (!pq_calories.empty() && i < 3) {
-    ans += pq_calories.top();
-    pq_calories.pop();
+  while (!parts.empty() && i < 3) {
+    ans += parts.top();
+    parts.pop();
     i++;
   }
 
