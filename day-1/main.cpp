@@ -20,14 +20,10 @@ auto parse_input() {
   return pq_calories;
 }
 
-auto part_one() {
-  std::priority_queue<int> pq_calories = parse_input();
-
-  return pq_calories.top();
-}
+auto part_one() { return parse_input().top(); }
 
 auto part_two() {
-  std::priority_queue<int> pq_calories = parse_input();
+  auto pq_calories = parse_input();
 
   auto ans = 0;
   auto i = 0;
