@@ -6,9 +6,8 @@ auto parse_input() {
 
   input.open("input.in");
 
-  auto current = static_cast<int>(0);
-
   std::string line;
+  auto current = 0;
   while (std::getline(input, line)) {
     if (line.empty()) {
       pq_calories.push(current);
@@ -30,8 +29,8 @@ auto part_one() {
 auto part_two() {
   std::priority_queue<int> pq_calories = parse_input();
 
-  auto ans = static_cast<int>(0);
-  auto i = static_cast<int>(0);
+  auto ans = 0;
+  auto i = 0;
   while (!pq_calories.empty() && i < 3) {
     ans += pq_calories.top();
     pq_calories.pop();
