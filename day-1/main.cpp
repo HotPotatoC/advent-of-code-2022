@@ -18,10 +18,10 @@ auto part_one() {
     }
   }
 
-  auto highest_calory =
+  auto highest_calorie =
       *std::max_element(total_calories.begin(), total_calories.end());
 
-  return highest_calory;
+  return highest_calorie;
 }
 
 auto part_two() {
