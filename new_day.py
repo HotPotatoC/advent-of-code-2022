@@ -24,6 +24,7 @@ def main():
         os.mkdir(next_day_dir)
         shutil.copyfile("./.template.cpp", os.path.join(next_day_dir, "main.cpp"))
         fp = open(os.path.join(next_day_dir, "input.in"), "w")
+        fp = open(os.path.join(next_day_dir, "input.sample.in"), "w")
         fp.close()
 
 
