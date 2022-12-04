@@ -3,13 +3,11 @@
 auto parse_input() { return 0; }
 
 auto part_one(auto input) {
-  auto input = parse_input();
   //
   return 0;
 }
 
 auto part_two(auto input) {
-  auto input = parse_input();
   //
   return 0;
 }
