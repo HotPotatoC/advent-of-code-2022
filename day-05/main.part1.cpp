@@ -12,7 +12,7 @@ int main() {
   while (std::getline(input, line) && line[1] != '1') {
     for (int i = 0; i < crates.size(); i++) {
       int char_idx = i * 4 + 1;
-      if (line[char_idx] >= 'A' && line[char_idx] <= 'Z') {
+      if (std::isalpha(line[char_idx])) {
         crates[i].push_back(line[char_idx]);
       }
     }
