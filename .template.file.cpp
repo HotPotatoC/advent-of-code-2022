@@ -4,6 +4,7 @@ auto parse_input() {
   std::ifstream input;
 
   input.open("input.in");
+  // input.open("input.sample.in");
 
   // parse input here
 
