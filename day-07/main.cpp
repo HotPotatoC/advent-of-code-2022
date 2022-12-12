@@ -20,8 +20,8 @@ struct File {
 struct Directory {
   Directory *parent;
   std::string name;
-  std::vector<std::unique_ptr<Directory> > children;
-  std::vector<std::unique_ptr<File> > files;
+  std::vector<std::unique_ptr<Directory>> children;
+  std::vector<std::unique_ptr<File>> files;
   long long size;
 };
 
